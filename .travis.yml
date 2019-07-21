@@ -1,0 +1,9 @@
+
+language: python
+python:
+- "3.4"
+install:
+- python setup.py bdist_wheel
+- pip install dist/company-matching-*.whl
+script:
+- python -m unittest tests
