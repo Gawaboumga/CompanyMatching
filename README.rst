@@ -48,7 +48,9 @@ Normalizer
 
 They have for definition:
 
-`def normalize(self, lhs, rhs, original_lhs, original_rhs, **parameters):`
+.. code-block:: python
+
+   def normalize(self, lhs, rhs, original_lhs, original_rhs, **parameters):
 
 The default behaviour consists to return the `lhs` and `rhs` unchanged. This is used to apply a treatment on company names such as removing accents for example.
 
@@ -57,7 +59,9 @@ Comparer
 
 They have for definition:
 
-`def compare(self, lhs, rhs, original_lhs, original_rhs, **parameters):`
+.. code-block:: python
+   
+   def compare(self, lhs, rhs, original_lhs, original_rhs, **parameters):
 
 The default behaviour consists to return `None` if no matching was possible. This allows a comparison function to be applied to the current state of company names, such as the Levenshtein distance. If it looks like a match, it produces a `MatchingResult` which is made of a score and additional arguments depending on which step the match was made.
 
